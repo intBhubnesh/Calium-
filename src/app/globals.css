@@ -2,20 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Reset input elements */
+input {
+  all: unset; /* Reset everything */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+input:focus,
+input:active {
+  outline: none; /* Remove focus ring */
+  box-shadow: none; /* Remove focus shadow */
+  border: none; /* Ensure no border changes */
+}
+
+/* Apply a global font */
+*, body {
+  font-family: 'Inter', sans-serif;
+}
+
+
+@layer base {
+  /* Custom Scrollbar Styles */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar width */
+    height: 0; /* Remove scrollbar height */
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; /* No background for track */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent; /* No background for thumb */
+    border: none; /* Remove thumb border */
+  }
+
+  .custom-scrollbar {
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+  }
 }
