@@ -1,12 +1,16 @@
 import { LogIn } from '@/pages/LogIn';
 import {OnBoarding} from '../pages/OnBoarding'
 import { SignUp } from '@/pages/SignUp';
+import { NavBar } from '@/components/NavBar';
+import { Market } from '@/components/Market';
 
 export default function Home() {
   return (
-   <div className='w-full p-10 overflow-hidden h-screen bg-[#0C0B10]'>
+   <div className='w-full p-4 overflow-hidden h-screen bg-zinc-950 flex '>
         {/* <OnBoarding /> */}
-        <LogIn />
+        {/* <LogIn /> */}
+        <NavBar />
+        <Market />
    </div>
   );
 }
