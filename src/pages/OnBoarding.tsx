@@ -23,8 +23,8 @@ export const OnBoarding = () => {
             </div>
           </div>
           <div className="flex flex-col gap-0">
-            <h2 className="text-3xl font-normal text-zinc-300">Choose your stack</h2>
-            <p className="text-sm -mt-1 text-zinc-500">
+            <h2 className="text-2xl font-normal text-zinc-300">Choose your stack</h2>
+            <p className="text-[12px] -mt-1 text-zinc-500">
               Choose your sides and contribute accordingly.
             </p>
           </div>
