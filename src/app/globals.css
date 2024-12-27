@@ -13,6 +13,15 @@ input:active {
   box-shadow: none; /* Remove focus shadow */
   border: none; /* Ensure no border changes */
 }
+input[type="checkbox"]:checked::before {
+    content: "✔"; /* Unicode or custom tick */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem; /* Adjust as needed */
+}
 
 /* Apply a global font */
 *, body {
@@ -21,7 +30,7 @@ input:active {
 
 
 @layer base {
-  /* Custom Scrollbar Styles */
+  Custom Scrollbar Styles
   .custom-scrollbar::-webkit-scrollbar {
     width: 0; /* Remove scrollbar width */
     height: 0; /* Remove scrollbar height */
