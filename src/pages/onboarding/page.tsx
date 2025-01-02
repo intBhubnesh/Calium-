@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import Tick from "../../public/icons/Frame.svg";
-import BigBuisness from "../../public/icons/BigBuisnessIcon.svg";
-import SmallBuisness from "../../public/icons/SmallBuisnessIcon.svg";
-import BigCactus from "../../public/images/BigCactus.png";
-import SmallCactus from "../../public/images/SmallCactus.png";
+import Tick from "../../../public/icons/Frame.svg";
+import BigBuisness from "../../../public/icons/BigBuisnessIcon.svg";
+import SmallBuisness from "../../../public/icons/SmallBuisnessIcon.svg";
+import BigCactus from "../../../public/images/BigCactus.png";
+import SmallCactus from "../../../public/images/SmallCactus.png";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const OnBoarding = () => {
   const [activeCard, setActiveCard] = useState("");
@@ -31,6 +32,7 @@ export const OnBoarding = () => {
         </div>
         <div className="flex flex-row h-full items-center justify-evenly">
           {/* Big Company Card */}
+         <Link href='/deploy'>
           <motion.div
             initial={{
               scale: 1,
@@ -92,6 +94,7 @@ export const OnBoarding = () => {
               </div>
             </div>
           </motion.div>
+          </Link>
           {/* Small Company Card */}
           <motion.div
             initial={{
