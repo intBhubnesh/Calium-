@@ -1,6 +1,6 @@
 "use client"
 
-
+import Link from 'next/link';
 import { useState } from 'react';
 import   Logo  from '../../public/icons/Logo.svg';
 import { motion, spring } from 'framer-motion';
@@ -60,12 +60,13 @@ export const NavBar: React.FC = () => {
             <img src={Logo.src} alt="logo" />
           </div>
           <div>
-            <h3 className="text-3xl font-semibold text-zinc-400">Caelum</h3>
+            <h3 className="text-3xl font-semibold text-zinc-400">caeluM.</h3>
             <p className="text-[12px] text-zinc-600">v1.0.0 - beta test</p>
           </div>
         </div>
         <div className="flex flex-col mt-6 h-1/2 p-2 gap-4">
           {navComponent.map(({  icon, name }) => (
+            <Link href={`/${name.toLowerCase()}`} key={name}>
             <motion.div
             initial={{
                 backgroundColor: "",
@@ -86,6 +87,7 @@ export const NavBar: React.FC = () => {
               </div>
               <h3 className="text-sm">{name}</h3>
             </motion.div>
+            </Link>
           ))}
         </div>
 
